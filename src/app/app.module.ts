@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { ClientesModule } from './clientes/clientes.module';
 import { ClientesService } from './clientes.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule,
     TemplateModule,
-    ClientesModule
+    ClientesModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [ClientesService],
   bootstrap: [AppComponent]
